@@ -329,7 +329,7 @@ int main()
     
     case 0:
         printf("please go in the general queue\n");
-        printf("Please fill the form of Hospital in block-letters only Clinic Name Age Mobile.No Address\n");
+        printf("Please fill the form of Hospital in block-letters only Clinic(except) Name Age Mobile.No Address\n");
         insertAtEnd(head);
         get_patient_data_treat(head);
         break;
