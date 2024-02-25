@@ -23,7 +23,7 @@ void generalclinic()
     printf("please enter 1 for first time and 0 for more than first time\n");
     scanf("%d",&temp);
     char gd[20];
-    printf("please tell your general disease like virus cough and coldcough");
+    printf("please tell your general disease like virus cough and coldcough\n");
     scanf("%s",gd);
     int n;
     if(strcmp(gd,"cough")==0)
@@ -260,6 +260,7 @@ void search(struct patient *ptr,int number)
 }
 void get_data(struct patient *ptr)
 {
+    printf("Enter Name,Age,Mobile No and address");
     scanf("%s %s %d %d %s",(ptr->firstname),(ptr->lastname),&(ptr->age),&(ptr->ID),(ptr->address));
 }
 void tosee_patients(struct patient *ptr,int number)
@@ -316,7 +317,7 @@ int main()
         {
             cardioclinic();
             strcpy(head->clinic,e.clinic);
-            printf("Please fill the form details for Entry in Hospital\n");
+            printf("Please fill the form details for Entry in Hospital \n");
             get_data(head);
         }
         else
@@ -328,7 +329,7 @@ int main()
     
     case 0:
         printf("please go in the general queue\n");
-        printf("Please fill the form of Hospital in block-letters only\n");
+        printf("Please fill the form of Hospital in block-letters only Clinic Name Age Mobile.No Address\n");
         insertAtEnd(head);
         get_patient_data_treat(head);
         break;
